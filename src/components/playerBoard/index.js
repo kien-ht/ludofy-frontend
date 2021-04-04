@@ -16,7 +16,7 @@ function PlayerBoard({ playerName, avatar, isReady, isRoomOwner }) {
         <Card.Img
           className="player-board-bg"
           variant="top"
-          src={isRoomOwner ? cardBackgroundKey : cardBackground }
+          src={isRoomOwner ? cardBackgroundKey : cardBackground}
         />
         {playerName && (
           <Card.ImgOverlay className="d-flex flex-column justify-content-between align-items-center py-0">
