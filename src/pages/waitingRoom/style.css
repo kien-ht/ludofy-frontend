@@ -1,0 +1,31 @@
+.waiting-room-bg {
+  background: url("assets/images/screen-waiting-background.png") center/cover
+    no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.playerboard-container {
+  /* position: absolute; */
+}
+
+.playerboard-row {
+  width: 35vw;
+  margin-bottom: 30px;
+}
+
+.custom-btn {
+  background: url("assets/images/btn-bg.png") center/cover no-repeat;
+  width: 10vw;
+  height: 7vh;
+
+  color: white;
+  font-weight: bold;
+  font-size: 2vw;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-btn:hover {
+  transform: scale(1.1);
+}

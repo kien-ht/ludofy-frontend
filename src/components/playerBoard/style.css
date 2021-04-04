@@ -1,0 +1,26 @@
+.player-board-bg {
+  /* background: url("assets/images/player-board-name.png") center/cover no-repeat; */
+  /* position: absolute; */
+}
+
+.player-name {
+  margin-top: 0px;
+  color: white;
+  font-weight: bold;
+}
+
+.card {
+  background: rgba(225, 225, 225, 0) !important;
+  border: none !important;
+}
+
+.avatar {
+  /* width: 8vw !important; */
+  height: 8vw !important;
+}
+
+.ready-status {
+  margin-top: 0px;
+  color: white;
+  font-weight: bold;
+}

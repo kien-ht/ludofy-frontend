@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+.login-register-bg {
+  background: url("assets/images/screen-login-background.png") center/cover
+    no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
