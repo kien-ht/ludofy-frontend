@@ -2,8 +2,9 @@ import "./style.css";
 import React from "react";
 import { Card } from "react-bootstrap";
 import cardBackground from "assets/images/player-board-name.png";
+import cardBackgroundKey from "assets/images/player-board-name-key.png";
 
-function PlayerBoard({ playerName, avatar, isReady }) {
+function PlayerBoard({ playerName, avatar, isReady, isRoomOwner }) {
   const readyClass = (isReady) => {
     const base = "ready-status mb-2";
     return isReady ? base + " text-light" : base + " text-danger";
@@ -15,7 +16,7 @@ function PlayerBoard({ playerName, avatar, isReady }) {
         <Card.Img
           className="player-board-bg"
           variant="top"
-          src={cardBackground}
+          src={isRoomOwner ? cardBackgroundKey : cardBackground }
         />
         {playerName && (
           <Card.ImgOverlay className="d-flex flex-column justify-content-between align-items-center py-0">

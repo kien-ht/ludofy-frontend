@@ -62,23 +62,8 @@ function WaitingRoom() {
     }
   };
 
-  const randomName = [
-    "Rollers_Toilet",
-    "Dislike_Breakfast",
-    "Cat_Clock",
-    "Urine_Clock",
-    "Monster_Book",
-    "Sink_Plants",
-    "Dislike_YouTube",
-    "Kitty_Soda",
-    "Towel_Video_games",
-    "Plants_Printer",
-  ];
-
   useEffect(() => {
     // Entering event
-    thisPlayer.userName = randomName[Math.floor(Math.random() * 10)];
-
     socket.open();
     socket.emit("joinRoom", thisPlayer);
 
@@ -112,11 +97,11 @@ function WaitingRoom() {
 
     // leaving event
     socket.on("duplicateConnection", () => {
-      setModal({
-        isShown: true,
-        title: "",
-        content: "You are already in the game in another window!",
-      });
+      // setModal({
+      //   isShown: true,
+      //   title: "",
+      //   content: "You are already in the game in another window!",
+      // });
       history.push("/list-room");
     });
 
@@ -156,6 +141,7 @@ function WaitingRoom() {
                   playerName={p.userName}
                   avatar={p.userName && Avatar}
                   isReady={p?.isReady}
+                  isRoomOwner={p.isRoomOwner}
                 ></PlayerBoard>
               </Col>
             );
